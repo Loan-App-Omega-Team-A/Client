@@ -175,10 +175,29 @@ Please ensure that you are using a compatible browser for the best experience.
 That's it! You have now successfully installed and set up Omega Loan Prediction Software on your development environment. You're ready to start exploring and customizing the application as per your requirements.
 
 
-## Design Guidelines
+## Design Guidelines 
 
 <!-- Document the design principles, UI/UX guidelines, and visual components used in the app. Include color schemes, typography, layout, and interaction patterns. Provide examples and usage guidelines for consistency. -->
+## UI/UX Guidelines
 
+primary colour - Shades of blue
+Secondary Coulour - Tints of blue
+Visual/ Action colour - green, Red, orange
+
+## Typography
+font-family: 'Inter';
+
+## Layout
+Grid Layout: A grid-based layout arranges content and elements in a structured grid system, typically with rows and columns. It provides an organized and balanced appearance to the design, making it popular for websites, print materials, and user interfaces.
+
+1000 rows 8px
+16 columns
+
+## interaction patterns
+1. Primary and Secondary button
+2. Input field 
+3. Toogle
+4. Checkbox
 
 
 ## Project Structure
