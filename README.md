@@ -183,7 +183,126 @@ That's it! You have now successfully installed and set up Omega Loan Prediction 
 
 ## Project Structure
 
-<!-- Describe the structure of the front-end codebase, including folders, files, and naming conventions. Explain the organization of components, stylesheets, scripts, and any other relevant assets. -->
+## Project Structure
+The repository Client was created in the default branch (main) and cloned. From there, another branch “dev” was created and into that branch a react project "omega client" was created with other files such as
+
+- .DS_Store
+The .DS_Store file is a hidden file created by the MacOS operating system to store custom viewing preferences for specific folders on your computer. It stands for Desktop Services Store. 
+
+- .gitignore
+ The .gitignore file is used to ignore specific files and directories in your Git repository. 
+     
+- README.md
+It contains essential informations about our project
+
+-	_redirects
+ The _redirects file is a configuration file used by the Netlify hosting service to create redirects for URLs.
+     
+-	Package-lock.json
+ The package-lock.json file is a file generated automatically by the npm (Node Package Manager) client when the npm install command is run. 
+ It is used by npm to lock down the exact version of each installed dependency for package.json files.
+    
+ -	Package.json 
+ The package.json file is an essential file used in any Node.js project that provides information about the project and specifies its dependencies.
+ It is located in the root directory of the project and contains metadata such as project name, version, description, author, license, and dependencies.
+     
+ # Omega-client folder
+The folder is composed of the different folders and files such as
+    
+  #	build folder
+ The build folder was created when we ran the npm run build for our project. This process bundles and minifies your JavaScript and CSS files and removes any unnecessary files or code to reduce the size of the final build and takes the source code written in JavaScript, CSS, and HTML and generates a static version of the website that can be hosted on a web server or content delivery network (CDN).
+ The build folder contains:
+          
+ -	index.html: The HTML template that loads our React components.
+ -	assets folder: made up of the auth, changePassword, contact, dashboard, error, landing folders and all the different folders contain images that were used either in the svg or png format.
+ -	static/media folder: Containing an image
+ - asset-manifest.json: A manifest file that lists the names of all the other files in the static folder.
+ -	manifest.json: It is a configuration file used in web applications to provide metadata about the application and its resources. 
+
+ # public folder
+ This folder contains 
+ - asset folder: made up of the auth, changePassword, contact, dashboard, error, landing folders and all the different folders contain images that were used either in the svg or png format.
+ -	_redirects file
+ -	index.html
+ -	3 images
+ - manifest.json
+ -	robots.txt
+ 
+ # src folder
+ It contains the source code of the application. This is where the code is written and organized. It also contains the entry point file index.js, which is the starting point of the application. This file usually renders the App component, which is the main component of the application.        
+    It contains
+    
+ # components folder
+ It contains reusable pieces of UI (User Interface) of our app, it makes easier for us to access and separate from other code, making it easier to work collaboratively on   the project.
+        The folders below are made of subcomponents to each of them respectively
+-	Button folder
+-	AuthLayout folder
+-	Circle folder
+-	Dashboard folderz
+-	Modal 
+-	SelectDropDown
+-	TextField
+-	Card.jsx, Hamburger.jsx, HomeNav.jsx, LockIcon.jsx, PasswordBtn.jsx, PrimaryButton.jsx, Secondary.jsx and SuccessIcon.jsx
+-
+ # Context folder
+This folder has to do with the Context API which is a feature in React that allows for global state management without having to pass props down through multiple components to reach nested components. It is used when some data needs to be accessible by many components at different nesting levels. 
+It has the
+- actions.js which declares different functions as actions the user performs such as logout, login failure etc
+- context.js
+- reducer.js file which takes each of the differents functions (actions)  and return the state.
+
+#	features folder
+ It contains each feature of our app. All folders that are relevant for our app. Under this folder, the are 2 sub folders which are the Auth (Authentication) and Dashboard.
+
+# The Auth folder contains all the feature.s that are related to the authentication phase, so we have the
+-	SignUp folder which contains files (index.js) that deals with the user creating an account on the app
+-	Login folder whixh contains index.js file for the user to be to have authenticate each time he comes back to the app with the credentials he used when signing up
+-	ForgotPassword folder whixh contains index.js file for any user that recall his/her former password. So he enters email and from there is directed how he can change his password
+-	ChangePassword has files (changepassword.jsx, ChangeSuccess.jsx, Email.jsx and verificationcode.jsx) that deal with the password been changed phase, verification code and the successful message when it is done.
+
+## The Dashboard folder contains features that are related to want will be displayed after user successfully logs in
+-	Admin folder which contains the (admin and addadmin.jsx) files that has the admin dashboard to display all the admins of the app and also add admin for the admins to add any one else as admin.
+-	BorrowersData folder which has the
+-	Eligibility folder which contains BorrowerEligibility.jsx and sendstatus.jsx files that are responsible in allowing the admin to check if someone is fully eligible to granted a loan
+-	InputData folder which contain Borrower’s data, collateral, guarantors, loan and personal informations files dealing with forms for the borrower to input information about the himself, the loan, guarantors.
+-	Preview folder contains a form that will allow to the borrowers to see all information entered after validation of inputData forms.
+-	Dashboard folder which has
+-	Borrowers profile which has the borrower’s profile file that is loan status, loan amount and the admin in charge
+-	Loans folder which contains (pending, refunded, declined or generated).jsx files that give information on the different loans and their status whether pending, refunded, declined or generated
+-	Helpsupport folder which contains files that will help the user wih any difficulties he/she faces
+-	SavedData which will contain files dealing with the borrower’s saved informations.
+-	Lastly, settings folder which contains history file
+
+#	pages folder
+Here, codes of different pages are present such as the Error page, signup page, verificationcodepage, LandingPage, Contact us page, About us, passwordchange successpage, dashboard page, forgot password page, login page, changepasswordpage.
+
+#	App.css
+It is a CSS file that contains the styles for the root component of the application. In the default configuration of a React project created with Create React App, this component is called App, and so the corresponding App.css file contains styles for this component.
+
+#	App.js
+ It contains the root component that represents the entire application. It is where all the routes of the application are found.
+ 
+#	index.css
+This file that contains global styles for the entire application. It can be used to set default styles for common elements, such as the body, headers, and footers of a web page.
+
+#	index.js
+This file serves as the main entry point for the application and is responsible for rendering the root component to the DOM.
+#	logo.svg
+#	.gitignore
+#	README.md
+Contains informations on how to create a react app till building it for production.
+#	package-lock.json
+ It is a file generated automatically by the npm (Node Package Manager) client when the npm install command is run. 
+#	package.json
+It is an essential file used in any Node.js project that provides information about our project and specifies its dependencies.
+#	postcss.config.js
+ It is responsible for loading and configuring the PostCSS plugins (tailwind css and autoprefixer). This file exports an object that specifies the plugins to use and their options.
+#	tailwind.config.js
+This file is used to configure Tailwind CSS and also allows us the developers to customize and extend the default behavior of Tailwind CSS and configure features such as the color palette
+
+
+
+
 
 
 ## Architecture and Components
